@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>odata_tute</title>
+        <script
+            id="sap-ui-bootstrap"
+            src="resources/sap-ui-core.js"
+            data-sap-ui-theme="sap_fiori_3"
+            data-sap-ui-resourceroots='{"odatatute": "./"}'
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+            data-sap-ui-async="true"
+			data-sap-ui-preload="async"
+            data-sap-ui-frameOptions="trusted"
+        ></script>
+    </head>
+    <body class="sapUiBody">
+        <div
+            data-sap-ui-component
+            data-name="odatatute"
+            data-id="container"
+            data-settings='{"id" : "odata_tute"}'
+        ></div>
+    </body>
+</html>
+
+<!-- Now we declare our component in the body of our index.html.
+     In the bootstrapping script of our index.html, 
+     we enable the ComponentSupport module and remove the sap.m library. 
+     Then, we declare our component in the body via a div tag.
+     This will instantiate the component when the onInit event is executed -->

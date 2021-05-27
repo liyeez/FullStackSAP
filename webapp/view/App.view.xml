@@ -1,0 +1,38 @@
+<mvc:View
+    controllerName="odatatute.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell class="myAppDemoWT">
+        <App> 
+    <!-- The page itself is placed into the pages aggregation of another control called sap.m.App -->
+            <pages> 
+    <!-- sap.m.Page provides an aggregation to 0..N other controls called content and the title attribute in a header section on top of the content -->
+                <Page title="{i18n>homePageTitle}">
+                    
+                        <headerContent>
+                            <Button
+                                icon="sap/icon://hello-world"
+                                press=".onOpenDialog"
+                            />
+                        </headerContent>
+                    <content>
+                        <mvc:XMLView viewName="odatatute.view.HelloPanel"/>
+                        <mvc:XMLView viewName="odatatute.view.InvoiceList"/>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>    
+</mvc:View>
+
+<!-- Using <App> writes a bunch of properties into the header of the index.html necessary for proper display on mobile devices.
+It also offers functionality to navigate between pages with animations -->
+
+<!-- to make the fullscreen height of the view work properly, we add the displayBlock attribute -->
+
+<!-- actual content is wrapped inside a Panel control, in order to group related content. -->
+
+<!--  The shell takes care of visual adaptation of the application to the device’s screen size by introducing 
+a so-called letterbox on desktop screens. which limits the app width -->
